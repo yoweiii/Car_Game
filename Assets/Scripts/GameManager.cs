@@ -26,13 +26,13 @@ public class GameManager : MonoBehaviour
         // 將旗子與汽車的距離顯示在UI上面
         distance.GetComponent<Text>().text = "距離目標還有 " + length.ToString("F2") + "m";
         // 計算汽車的距離所得分數，超過旗子則0分
-         float score = 100 / length;
-        if (score > 100)
+         float showscore = 100 / length;
+         if (length >= 0)
         {
             // 將汽車的距離所得分數顯示在UI上面，小數點第0位
-            score.GetComponent<Text>().text = "分數 " + score.ToString("F0") + "分";
+            score.GetComponent<Text>().text = "分數 " + showscore.ToString("F0") + "分";
         }
-        else
+        else 
         {
             score.GetComponent<Text>().text = "分數 0 分";
         }
