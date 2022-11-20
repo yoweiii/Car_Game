@@ -7,7 +7,8 @@ public class GameManager : MonoBehaviour
 {
     GameObject car;              // 用來儲存汽車物件
     GameObject flag;             // 用來儲存旗子物件
-    GameObject distance;         // 用來儲存UI文字物件
+    GameObject distance;         // 用來儲存UI文字距離物件
+    GameObject score;            // 用來儲存UI文字分數物件
 
     void Start() // 將場景中的物件放到已宣告的各個物件中
     {
@@ -26,7 +27,9 @@ public class GameManager : MonoBehaviour
         distance.GetComponent<Text>().text = "距離目標還有 " + length.ToString("F2") + "m";
         // 計算汽車的距離所得分數，超過旗子則0分
          float score = 100 / length;
+         // 將汽車的距離所得分數顯示在UI上面，小數點第0位
         if (score > 100)
+        distance.GetComponent<Text>().text = "分數 " + length.ToString("F0") + "分";
     }
     }
 }
