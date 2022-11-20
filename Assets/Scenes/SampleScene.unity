@@ -555,6 +555,7 @@ GameObject:
   - component: {fileID: 1689436940}
   - component: {fileID: 1689436939}
   - component: {fileID: 1689436941}
+  - component: {fileID: 1689436942}
   m_Layer: 0
   m_Name: car
   m_TagString: Untagged
@@ -725,6 +726,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1689436942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1689436938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5707be9ea4ecf44389c4224d90a5fdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1719136846
 GameObject:
   m_ObjectHideFlags: 0
@@ -736,6 +749,7 @@ GameObject:
   - component: {fileID: 1719136847}
   - component: {fileID: 1719136849}
   - component: {fileID: 1719136848}
+  - component: {fileID: 1719136850}
   m_Layer: 5
   m_Name: Distance
   m_TagString: Untagged
@@ -805,3 +819,15 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1719136846}
   m_CullTransparentMesh: 1
+--- !u!114 &1719136850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1719136846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df9d5c2d5953cc544adc47d850231d3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
