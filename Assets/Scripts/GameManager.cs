@@ -48,7 +48,15 @@ public class GameManager : MonoBehaviour
         if(length == 15.23f)        {
             score.GetComponent<Text>().text = "分數0 分";
         }
-        
+        else if (length > 15.23f)
+        {
+            score.GetComponent<Text>().text = "分數 0 分";
+        }
+        if (showscore > 100)
+        {
+            score.GetComponent<Text>().text = "分數 100 分";
+        }
+
 
 
 
