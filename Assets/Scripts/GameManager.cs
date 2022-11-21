@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
 
     void Start() // 將場景中的物件放到已宣告的各個物件中
     {
-        car = GameObject.Find("car");         
+        car = GameObject.Find("car");
         flag = GameObject.Find("flag");
         distance = GameObject.Find("Distance");
         score = GameObject.Find("Score");
@@ -20,23 +20,37 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-    
+  
         // 計算旗子與汽車的距離
         float length = flag.transform.position.x - car.transform.position.x;
         // 將旗子與汽車的距離顯示在UI上面
         distance.GetComponent<Text>().text = "距離目標還有 " + length.ToString("F2") + "m";
         // 計算汽車的距離所得分數，超過旗子則0分
-         float showscore = 100 / length;
-         if (length >= 0)
+        float showscore = 100 / length;
+
+        if (length >0)
         {
             // 將汽車的距離所得分數顯示在UI上面，小數點第0位
             score.GetComponent<Text>().text = "分數 " + showscore.ToString("F0") + "分";
+        }
+        else if (length == 0)
+        {
+            score.GetComponent<Text>().text = "分數 0 分";
         }
         else 
         {
             score.GetComponent<Text>().text = "分數 0 分";
         }
+        if (length > 100)
+        {
+            score.GetComponent<Text>().text = "分數 100 分";
+        }
+        if(length == 15.23f)        {
+            score.GetComponent<Text>().text = "分數0 分";
+        }
+        
 
-    
+
+
     }
 }
